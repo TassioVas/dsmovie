@@ -1,9 +1,17 @@
+import axios from "axios";
 import MovieCard from "components/MovieCard";
 
 
 import Pagination from "components/Navbar/Pagination";
 
 function Listing() {
+
+    // forma errada
+    axios.get('http://localhost:8080/movie?size=128page=0')
+    .then(response => {
+        console.log(response.data);
+    });
+
     return (
         <>
             <Pagination />
